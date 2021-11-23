@@ -1,0 +1,36 @@
+<nav class="navbar navbar-dark bg-dark">
+  <span class="navbar-text">
+    <h4 class="text-center">api por token</h4>
+  </span>
+</nav>
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-12">
+      <h3>Listado de post</h3>
+
+      <button type="button" class="btn btn-primary" (click)="nuevoPost()">Nuevo Post</button>
+
+      <table class="table table-hover table-dark mt-5">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let posteo of posteos">
+            <th scope="row">{{posteo.id}}</th>
+            <td>{{posteo.titulo}}</td>
+            <td>{{posteo.descripcion}}</td>
+            <td>{{posteo.fecha}}</td>
+          </tr>
+        </tbody>
+      </table>      
+    </div>
+  </div>
+</div>
+
+<footer>Bruno Ruiz</footer>
