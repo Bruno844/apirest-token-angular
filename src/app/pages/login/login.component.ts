@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     this.userService.login(user)
     .subscribe(data => {
       this.userService.setToken(data.token); //tome el token que llama desde la api
-      this.router.navigateByUrl('/dashboard'); //si el inicio de sesion resulto correcto,me redirija a la pagina de dashboard
+      this.router.navigate(['dashboard']); //si el inicio de sesion resulto correcto,me redirija a la pagina de dashboard
     })
     //muestro por consola los valores obtenidos por las variables de email y password, que estarian guardadas en const user
   }

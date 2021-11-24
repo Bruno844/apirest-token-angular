@@ -9,7 +9,8 @@
     <div class="col-12">
       <h3>Listado de post</h3>
 
-      <button type="button" class="btn btn-primary" (click)="nuevoPost()">Nuevo Post</button>
+      <button type="button"  class="btn btn-primary" (click)="nuevoPost()" *ngIf="islogged">Nuevo Post</button>
+      <button type="button" class="btn btn-dark mx-4" (click)="redirectToLogin()" *ngIf="yetlogged">¿No iniciaste Sesion?</button>
 
       <table class="table table-hover table-dark mt-5">
         <thead>

@@ -9,7 +9,7 @@ import { NuevoComponent } from './pages/nuevo/nuevo.component';
 const routes: Routes = [
   {
     path: "",
-    redirectTo: 'login',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
   },
   {
